@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevToolbox - Developer Utilities
 
-## Getting Started
+A beautiful, modern collection of essential developer tools built with Next.js 14. Features JSON beautification, character counting, and more utilities - all running locally in your browser.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Current Tools
+
+- **JSON Beautifier & Validator**
+  - ✓ Format JSON with proper indentation
+  - ✓ Minify JSON for production
+  - ✓ Validate JSON syntax with detailed error messages
+  - ✓ Copy, download, and share formatted JSON
+
+- **Character Counter**
+  - ✓ Count total characters
+  - ✓ Count characters without spaces
+  - ✓ Word counter
+  - ✓ Comma-separated items counter
+  - ✓ Real-time statistics updates
+
+### Design Features
+
+- 🌓 Dark/Light mode with localStorage persistence
+- 🎨 Modern, minimal UI with smooth animations
+- 📱 Fully responsive design
+- ⚡ Fast, client-side processing
+- 🔒 Privacy-focused - all tools run locally
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ installed
+- yarn package manager
+
+### Installation
+
+1. Install dependencies:
+   ```bash
+   yarn install
+   ```
+
+2. Run the development server:
+   ```bash
+   yarn dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📁 Project Structure
+
+```
+├── app/
+│   ├── page.js              # Main application with all tools
+│   ├── layout.js            # Root layout with theme provider
+│   ├── api/[[...path]]/     # API routes (health check)
+│   └── globals.css          # Global styles
+├── components/
+│   ├── ui/                  # shadcn/ui components
+│   └── theme-provider.jsx   # Theme context provider
+└── lib/
+    └── utils/               # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 14 with App Router
+- **UI Library**: React 18
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **Theme**: next-themes for dark/light mode
+- **Icons**: Lucide React
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Features in Detail
 
-## Learn More
+### JSON Beautifier
 
-To learn more about Next.js, take a look at the following resources:
+Perfect for developers working with JSON data:
+- Paste messy JSON and get perfectly formatted output
+- Validate JSON structure before using in your code
+- Minify JSON to reduce file size
+- Export formatted JSON as a file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Character Counter
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Essential for content creators and developers:
+- Get real-time character counts
+- Count words in your text
+- Perfect for comma-separated lists (tags, keywords, etc.)
+- Export statistics as a text file
 
-## Deploy on Vercel
+### Theme System
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Automatic system preference detection
+- Manual toggle between light/dark modes
+- Smooth transitions between themes
+- Theme preference saved in localStorage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔮 Coming Soon
+
+- Base64 Encoder/Decoder
+- URL Encoder/Decoder
+- Hash Generator (MD5, SHA-256)
+- Timestamp Converter
+- Color Picker/Converter
+- Regex Tester
+
+## 📝 Usage Examples
+
+### JSON Beautifier
+
+```json
+// Input (minified)
+{"name":"John","age":30,"city":"New York"}
+
+// Output (beautified)
+{
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+```
+
+### Character Counter
+
+```
+Input: apple, banana, orange, grape, mango
+
+Results:
+- Total Characters: 35
+- Without Spaces: 31
+- Words: 5
+- Comma-Separated Items: 5
+```
+
+## 🚀 Deployment
+
+Build for production:
+
+```bash
+yarn build
+yarn start
+```
+
+The app is optimized for deployment on Vercel, Netlify, or any Node.js hosting platform.
+
+## 📄 License
+
+MIT
+
+## 🤝 Contributing
+
+This is a growing collection of developer tools. More utilities will be added regularly to help developers be more productive.
+
