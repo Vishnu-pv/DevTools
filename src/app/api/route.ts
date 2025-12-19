@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 // Health check endpoint
-export async function GET(request) {
+export async function GET(request: Request) {
   const { pathname } = new URL(request.url)
   
   if (pathname === '/api/health') {
@@ -18,7 +18,7 @@ export async function GET(request) {
   }, { status: 404 })
 }
 
-export async function POST(request) {
+export async function POST(request: Request) {
   return NextResponse.json({ 
     error: 'Not implemented',
     message: 'This endpoint is not yet implemented'

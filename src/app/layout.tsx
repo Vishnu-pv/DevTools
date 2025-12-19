@@ -1,15 +1,23 @@
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { ThemeProvider } from '@/components/theme-provider'
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
-export const metadata = {
-  title: 'DevToolbox - Developer Utilities',
-  description: 'Essential developer tools including JSON beautifier, character counter, and more',
-}
+const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({ children }) {
+export const metadata: Metadata = {
+  title: "DevToolbox - Developer Utilities",
+  description:
+    "Essential developer tools including JSON beautifier, character counter, and more",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: ReactNode;
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
@@ -23,7 +31,5 @@ export default function RootLayout({ children }) {
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
-
-
